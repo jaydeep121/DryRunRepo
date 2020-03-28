@@ -10,5 +10,4 @@ public class ArrayManipulation {
 	public void update() {
 		
 	}
-	
 }

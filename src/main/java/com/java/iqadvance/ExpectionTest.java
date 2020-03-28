@@ -8,8 +8,24 @@ public class ExpectionTest {
 		int sum=a+b;
 		return sum;
 	}
-	
+	public int sum() {
+		System.out.println(" block ");
+		try {
+			return 1;
+		}
+			catch(ArithmeticException e) {
+				return 2;
+			}
+		finally {
+			System.out.println("finnally block ");
+		}
+	}
 	@Test
+	public void get() {
+		ExpectionTest e=new ExpectionTest();
+		System.out.println(e.sum());
+	}
+	@Test(enabled=false)
 	public void sumTest() {
 		ExpectionTest obj=new ExpectionTest();
 		int s=obj.add(1, 2);
